@@ -26,6 +26,7 @@ import optimization
 import tokenization
 import tensorflow as tf
 
+csv.field_size_limit(sys.maxsize)
 flags = tf.flags
 
 FLAGS = flags.FLAGS
