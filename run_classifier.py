@@ -339,21 +339,21 @@ class ColaProcessor(DataProcessor):
   def get_train_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, "train.tsv")), "train")
+        self._read_tsv(os.path.join(data_dir, "brett_train_shuf.tsv")), "train")
 
   def get_dev_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, "dev.tsv")), "dev")
+        self._read_tsv(os.path.join(data_dir, "brett_dev_shuf.tsv")), "dev")
 
   def get_test_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, "test.tsv")), "test")
+        self._read_tsv(os.path.join(data_dir, "brett_test_shuf.tsv")), "test")
 
   def get_labels(self):
     """See base class."""
-    return ["0", "1"]
+    return ["BO", "CA", "CO", "DE", "ES", "LE", "LS", "NE", "NO", "NT", "PA", "PE", "PR", "PS", "SP", "TR"]
 
   def _create_examples(self, lines, set_type):
     """Creates examples for the training and dev sets."""
